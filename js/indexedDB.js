@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async function(){
     // Preset Book Data
     var getBooks = await fetch("./books.JSON").then(req => req.json()).then(data => data);
     // Define your database
-    var db = new Dexie("library_database");
+    window.db = new Dexie("library_database");
     db.version(1).stores({
         books: 'title,author,numberOfPages,cover,synopsis,publishDate,rating'
     });
