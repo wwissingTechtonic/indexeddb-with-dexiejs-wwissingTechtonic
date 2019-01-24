@@ -6,69 +6,60 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-      <table class="table-striped">
-          <thead>
+    <h1>IndexedDB Assignment</h1>
+      <table class="table table-striped">
+          <thead class="thead-dark">
               <tr>
-                  <td>Cover</td>
-                  <td>Title</td>
-                  <td>Author</td>
-                  <td>Pages</td>
-                  <td>Synopsis</td>
-                  <td>Publish Date</td>
-                  <td>Rating</td>
-                  <td>Delete</td>
+                  <th>Cover</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Pages</th>
+                  <th>Synopsis</th>
+                  <th>Publish Date</th>
+                  <th>Rating</th>
+                  <th>Delete</th>
               </tr>
           </thead>
           <tbody>
-               
           </tbody>
       </table>
       <hr>
       <form>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <label for="inputEmail4">Title</label>
+                <input type="text" class="form-control" id="inputTitle" placeholder="Title">
               </div>
               <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <label for="Author">Author</label>
+                <input type="text" class="form-control" id="inputAuthor" placeholder="Author">
               </div>
             </div>
-            <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputPages">Number Of Pages</label>
+              <input type="number" class="form-control" id="inputPages" placeholder="300">
             </div>
+            <div class="form-group col-md-6">
+              <label for="inputCover">Cover</label>
+              <input type="file" class="form-control" id="inputCover">
+            </div>
+          </div>
             <div class="form-group">
-              <label for="inputAddress2">Address 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              <label for="inputSynopsis">Synopsis</label>
+              <input type="text" class="form-control" id="inputSynopsis" placeholder="Synopsis">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <label for="inputRating">Rating</label>
+                <input type="number" class="form-control" id="inputRating" placeholder="5">
               </div>
-              <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+              <div class="form-group col-md-6">
+                <label for="inputDate">Publish Date</label>
+                <input type="date" id="inputDate" class="form-control">
               </div>
             </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
       <script defer src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
       <script defer src="../js/indexedDB.js"></script>
