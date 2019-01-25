@@ -28,41 +28,42 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Title</label>
-                <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Title" onchange="handleChange()">
+                <input minlength="1" type="text" class="form-control" id="inputTitle" placeholder="Title">
               </div>
               <div class="form-group col-md-6">
                 <label for="Author">Author</label>
-                <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Author" onchange="handleChange()">
+                <input type="text" class="form-control" id="inputAuthor" placeholder="Author">
               </div>
             </div>
             <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputPages">Number Of Pages</label>
-              <input name="numPages" type="number" class="form-control" id="inputPages" placeholder="300" onchange="handleChange()">
+              <input type="number" class="form-control" id="inputPages" placeholder="300">
             </div>
             <div class="form-group col-md-6">
               <label for="inputCover">Cover</label>
-              <input type="file" class="form-control" id="inputCover" onchange="handleChange()">
+              <input type="file" class="form-control" id="inputCover">
             </div>
           </div>
             <div class="form-group">
               <label for="inputSynopsis">Synopsis</label>
-              <input type="text" class="form-control" id="inputSynopsis" placeholder="Synopsis" onchange="handleChange()">
+              <input type="text" class="form-control" id="inputSynopsis" placeholder="Synopsis">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputRating">Rating</label>
-                <input type="number" class="form-control" id="inputRating" placeholder="5" onchange="handleChange()">
+                <input type="number" class="form-control" id="inputRating" placeholder="5">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputDate">Publish Date</label>
-                <input type="date" id="inputDate" class="form-control" onchange="handleChange()">
+                <input type="date" id="inputDate" class="form-control">
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary" type="submit" onclick="addbook(event)">Submit</button>
           </form>
       <script defer src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
       <script defer src="../js/indexedDB.js"></script>
       <script defer src="../js/app.js"></script>
+      <script defer src="../js/populate-table.js"></script>
   </body>
 </html>
