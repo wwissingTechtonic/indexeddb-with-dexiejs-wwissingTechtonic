@@ -45,20 +45,20 @@ function addBook(event) {
 //TODO - need to hook up the events target primary key (which is the title) with this function
     // 2: YOUR CODE HERE
     //I used the add() method instead of the put method because the put() will overwrite the if there is a duplicate title in the database
-    var formValues = db.books.forms.add({
-      title: document.getElementByID('inputTitle').value,
-      author: document.getElementByID('inputAuthor').value,
-      pages: document.getElementByID('inputPages').value,
-      synopsis: document.getElementByID('inputSynopsis').value,
-      publishDate: document.getElementByID('inputPublishDate').value,
-      rating: document.getElementByID('inputRating').value
-    });
-
-      formValues.then(val => console.log(val))
-      formValues.catch(function(rejected) {
-      console.log(rejected);
-      })
-      populateTableUI();
+    // var formValues = db.books.add({
+    //   title: document.getElementByID('inputTitle').value,
+    //   author: document.getElementByID('inputAuthor').value,
+    //   pages: document.getElementByID('inputPages').value,
+    //   synopsis: document.getElementByID('inputSynopsis').value,
+    //   publishDate: document.getElementByID('inputPublishDate').value,
+    //   rating: document.getElementByID('inputRating').value
+    // });
+    //
+    //   formValues.then(val => console.log(val))
+    //   formValues.catch(function(rejected) {
+    //   console.log(rejected);
+    //   })
+    //   populateTableUI();
 
   }
 //     let newBook = await db.books.where('title').equals(newBookTitle).toArray()
@@ -87,22 +87,21 @@ function addBook(event) {
 
 
 function editBook(event) {
-// TODO - need to check that this function works correctly
+// TODO - need to check
     // 3. YOUR CODE HERE
-    var bookToUpdate = 
-    var updateBook = db.books.put({
-      title: document.getElementByID('inputTitle').value,
-      author: document.getElementByID('inputAuthor').value,
-      pages: document.getElementByID('inputPages').value,
-      synopsis: document.getElementByID('inputSynopsis').value,
-      publishDate: document.getElementByID('inputPublishDate').value,
-      rating: document.getElementByID('inputRating').value,
-    });
-    updateBook.then(val => console.log(val))
-    updateBook.catch(function(rejected) {
-    console.log(rejected);
-    })
-    populateTableUI();
+    // var updateBook = db.books.put({
+    //   title: document.getElementByID('inputTitle').value,
+    //   author: document.getElementByID('inputAuthor').value,
+    //   pages: document.getElementByID('inputPages').value,
+    //   synopsis: document.getElementByID('inputSynopsis').value,
+    //   publishDate: document.getElementByID('inputPublishDate').value,
+    //   rating: document.getElementByID('inputRating').value,
+    // });
+    // updateBook.then(val => console.log(val))
+    // updateBook.catch(function(rejected) {
+    // console.log(rejected);
+    // })
+    // populateTableUI();
 }
 
 

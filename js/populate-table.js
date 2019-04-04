@@ -30,11 +30,11 @@ async function populateTableUI(newBookTitle) {
       deleteBtn.addEventListener('click', function(){
         deleteBook(allBooks[i].title);
       });
-      var addBookForm = document.forms['addBook'];
-      addBookForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        addBook()
-      }
+      // var addBookForm = document.forms['addBook'];
+      // addBookForm.addEventListener('submit', function(e){
+      //   e.preventDefault();
+      //   addBook()
+      // }
       row.append(deleteBtn);
       row.append(editBtn);
       tBody.append(row);
